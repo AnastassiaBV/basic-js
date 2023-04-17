@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <title>HTML Document</title>
+   </head>
+   <body>
+      <p>
+         <b>
+            Этот текст будет полужирным, <i>а этот — ещё и курсивным</i>.
+         </b>
+      </p>
+      <script language="JavaScript">
+//             function countCats(arrCats) {
+//   let count=0;
+//   for(let item of arrCats){
+//     for(let cats of item){
+//       if(cats=='^^'){
+//         count++
+//       }
+//     }
+//   }
+//   console.log(count);
+
+// }
+// countCats([
+//   [0, 1, '^^'],
+//   [0, '^^', 2],
+//   ['^^', 1, 2]
+//  ]);
+// let arr="hello";
+// for(let i=0; i<arr.length; i++ ){
+//     console.log(arr[i ])
+// }
+
+// const MODERN_ACTIVITY = 15;
+// const HALF_LIFE_PERIOD = 5730;
+
+// let dateSample = sampleActivity => {
+   
+// if(Number(sampleActivity)>MODERN_ACTIVITY || Number(sampleActivity) < 0 || isNaN(sampleActivity)==true){
+//       console.log(false)
+//       return false
+//    }else{
+//       let k = 0.693/HALF_LIFE_PERIOD;
+//       let t = Math.ceil(Math.log(MODERN_ACTIVITY/Number(sampleActivity))/k,1)
+//       console.log(t)
+//    }
+// }
+// dateSample("3")
+
+
+let createDreamTeam = members => {
+   let dreamName = []
+   for (let item of members){
+      if (isNaN(item)==true) {
+         dreamName.push(item[0])
+      }
+   }
+   console.log(dreamName.sort())
+}
+createDreamTeam(['nemi', 'danik', 'nastya','nemi', 'danik', 'nastya','nemi', 'danik', 'nastya'])
+    </script>
+   </body>
+</html>
