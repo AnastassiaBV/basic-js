@@ -17,18 +17,19 @@ const HALF_LIFE_PERIOD = 5730;
  * dateSample('WOOT!') => false
  *
  */
-function dateSample( sampleActivity ) {
-  
-    if(Number(sampleActivity)>MODERN_ACTIVITY || Number(sampleActivity) < 0 || isNaN(sampleActivity)==true){
-          
-          return false
-       }else{
-          let k = 0.693/HALF_LIFE_PERIOD;
-          let t = Math.ceil(Math.log(MODERN_ACTIVITY/Number(sampleActivity))/k,1)
-          return t
-       }g
-    
-    
+function dateSample(sampleActivity) {
+  if (typeof sampleActivity !== 'string' || sampleActivity.length === 0) return false
+
+  if (Number(sampleActivity) > MODERN_ACTIVITY || Number(sampleActivity) <= 0 || isNaN(sampleActivity)==true) {
+
+    return false
+  } else {
+    let k = 0.693 / HALF_LIFE_PERIOD;
+    let t = Math.ceil(Math.log(MODERN_ACTIVITY / Number(sampleActivity)) / k, 1)
+    return t
+  } g
+
+
   // remove line with error and write your code here
 }
 

@@ -14,14 +14,14 @@ const { NotImplementedError } = require('../extensions/index.js');
  *
  */
 function createDreamTeam(members) {
-  if(Array.isArray(members)==false) return false
+  if(!Array.isArray(members)) return false
   let dreamName = []
-   for (let item of members){
-      if (isNaN(item)==true) {
-         dreamName.push(item[0])
-      }
-   }
-   return dreamName.sort().join("").toUpperCase()
+  members.forEach(item=>{
+    if (typeof item == 'string') {
+      dreamName.push(item.trim()[0].toUpperCase())
+    }
+  })
+   return dreamName.sort().join("")
    
    
   // remove line with error and write your code here

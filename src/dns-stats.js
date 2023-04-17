@@ -28,19 +28,19 @@ function getDNSStats(/* domains */) {
 }
 
 function getDNSStats(domains) {
-  let domainObj = {}
+  let dom = {}
   domains.forEach(elem => {
-    let domain = ''
+    let key = ''
     return elem.split(".").reverse().forEach(item=>{
-      domain += "." + item
-      if(domain in domainObj){
-        domainObj[domain]++
+      key += "." + item
+      if(key in dom){
+        dom[key]++
       }else{
-        domainObj[domain] = 1
+        dom[key] = 1
       }
     })
   })
-  return domainObj
+  return dom
 }
 
 getDNSStats([
