@@ -15,7 +15,20 @@ function getCommonCharacterCount(/* s1, s2 */) {
   throw new NotImplementedError('Not implemented');
   // remove line with error and write your code here
 }
+function getCommonCharacterCount(first, sec) {
+  let countList = 0;
+  let arr = first.split('');
 
+  for (let i = 0; i < sec.length; i++) {
+    let index = arr.indexOf(sec[i]);
+    if (index >= 0) {
+      countList++;
+      arr.splice(index, 1);
+    }
+  }
+  return countList;
+}
+getCommonCharacterCount('aabcc','adcaa')
 module.exports = {
   getCommonCharacterCount
 };
